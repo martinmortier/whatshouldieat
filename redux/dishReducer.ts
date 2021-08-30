@@ -1,7 +1,13 @@
 import { IDish } from "../interfaces/IDish";
+import { getDishById } from "../services/dishService";
 
-const initialState: IDish ={
+const initialState: IDish = {
+        id_dish: 0,
         name: "",
+        ingredients: [{
+            id_ingredient: 0,
+            name: ""
+        }],
         time: 0
 }
 
@@ -10,25 +16,24 @@ const DishReducer = (state: IDish= initialState, action) => {
     switch(action.type) {
         case "GET_DISH":
             return {
-                ...state,
-                name: action.payload.name,
-                time: action.payload.time
+                ...action.payload
             }
         default:
             return state
     }
 }
 
-export const getDish = () => {
+export const getDish = (id: number) => {
     return async (dispatch) => {
-        const response = await fetch("http://localhost:3000/menu")
-        const data = await response.json()
-        console.log("data",data)
+        const dish = await getDishById(id)
+        console.log("dish",dish)
         dispatch({
             type: "GET_DISH",
             payload: {
-                name: "Burger",
-                time: 30
+                id_dish: dish.id_dish,
+                name: dish.name,
+                ingredients: dish.ingredients,
+                time: dish.time
             }
         })
     }

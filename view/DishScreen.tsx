@@ -6,7 +6,7 @@ const DishScreen = () => {
     const dispatch = useAppDispatch()
     const dish = useAppSelector(state => state.dish)
     useEffect(() => {
-        dispatch(getDish())
+        dispatch(getDish(1))
     },[])
 
     return(
