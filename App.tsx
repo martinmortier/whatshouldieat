@@ -4,19 +4,20 @@ import { StyleSheet, Text, View } from 'react-native';
 import { Provider } from 'react-redux';
 import store from './redux/store'
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './view/HomeScreen';
-import DescriptionScreen from './view/DescriptionScreen';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import IDishScreen from './view/DishScreen';
 
-const Stack = createNativeStackNavigator()
+
+const Tab = createBottomTabNavigator()
 export default function App() {
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name="Home" component={HomeScreen} />
-          <Stack.Screen name="Description" component={DescriptionScreen} />
-        </Stack.Navigator>
+        <Tab.Navigator>
+          <Tab.Screen name="Home" component={HomeScreen} />
+          <Tab.Screen name="Dish" component={IDishScreen} />
+        </Tab.Navigator>
       </NavigationContainer>
     </Provider>
   );

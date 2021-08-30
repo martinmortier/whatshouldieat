@@ -1,4 +1,7 @@
 import { combineReducers } from 'redux'
-const rootReducer = combineReducers({});
+import DishReducer from './dishReducer';
+const rootReducer = combineReducers({
+    dish: DishReducer,
+});
 
 export default rootReducer
