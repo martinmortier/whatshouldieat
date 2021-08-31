@@ -2,16 +2,17 @@ import { IDish } from "../interfaces/IDish";
 import { getDishById } from "../services/dishService";
 
 const initialState: IDish = {
-        id_dish: 0,
+        id: 0,
+        image: "",
         name: "",
         ingredients: [{
-            id_ingredient: 0,
+            id_ingredients: 0,
             name: ""
         }],
         time: 0
 }
 
-const DishReducer = (state: IDish= initialState, action) => {
+const DishReducer = (state: IDish= initialState, action: any) => {
     console.log(action)
     switch(action.type) {
         case "GET_DISH":
@@ -24,13 +25,13 @@ const DishReducer = (state: IDish= initialState, action) => {
 }
 
 export const getDish = (id: number) => {
-    return async (dispatch) => {
+    return async (dispatch: any) => {
         const dish = await getDishById(id)
-        console.log("dish",dish)
         dispatch({
             type: "GET_DISH",
             payload: {
-                id_dish: dish.id_dish,
+                id: dish.id,
+                image: dish.image,
                 name: dish.name,
                 ingredients: dish.ingredients,
                 time: dish.time

@@ -1,9 +1,10 @@
 export interface IDish {
-    id_dish: number;
+    id: number;
+    image: string;
     name: string;
     time: number;
     ingredients: [{
-        id_ingredient: number;
+        id_ingredients: number;
         name: string;
     }]
 }
