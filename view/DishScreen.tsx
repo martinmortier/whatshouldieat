@@ -2,7 +2,7 @@ import React , { useEffect }from 'react'
 import { View, Text } from "react-native"
 import { useAppDispatch, useAppSelector } from '../hooks/reduxHooks'
 import { getDish } from '../redux/dishReducer'
-import DishDetails from '../components/dishDetails'
+import DishDetails from '../components/DishDetails'
 const DishScreen = () => {
     const dispatch = useAppDispatch()
     const dish = useAppSelector(state => state.dish)
