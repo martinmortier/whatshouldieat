@@ -7,5 +7,5 @@ export interface IDish {
         id_ingredients: number;
         name: string;
     }],
-    vote: number;
+    votes: number;
 }
