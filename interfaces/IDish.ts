@@ -6,5 +6,6 @@ export interface IDish {
     ingredients: [{
         id_ingredients: number;
         name: string;
-    }]
+    }],
+    vote: number;
 }

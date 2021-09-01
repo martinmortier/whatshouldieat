@@ -9,7 +9,8 @@ const initialState: IDish = {
             id_ingredients: 0,
             name: ""
         }],
-        time: 0
+        time: 0,
+        vote: 0
 }
 
 const DishReducer = (state: IDish= initialState, action: any) => {
@@ -34,7 +35,8 @@ export const getDish = (id: number) => {
                 image: dish.image,
                 name: dish.name,
                 ingredients: dish.ingredients,
-                time: dish.time
+                time: dish.time,
+                vote: dish.vote
             }
         })
     }
