@@ -14,6 +14,7 @@ const DishDetails = ({ dish }: DishDetailsProps) => {
                 renderItem={({ item }) => <Text>{item.name}</Text>}
                 keyExtractor={item => item.id_ingredients.toString()}
             />
+            <Text>{dish.votes}</Text>
         </View>
     )
 }
