@@ -14,7 +14,6 @@ const initialState: IDish = {
 }
 
 const DishReducer = (state: IDish= initialState, action: any) => {
-    console.log(action)
     switch(action.type) {
         case "GET_DISH":
             return {

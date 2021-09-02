@@ -14,10 +14,10 @@ export default function App() {
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <Tab.Navigator>
+        <Tab.Navigator screenOptions={{headerShown:false}}>
           <Tab.Screen name="Home" component={HomeScreen} />
           <Tab.Screen name="Dish" component={DishScreen} />
-          <Tab.Screen name="FindDish" component={FindDishScreen} />
+          <Tab.Screen name="FindDish" component={FindDishScreen} paddingTop="20%"/>
         </Tab.Navigator>
       </NavigationContainer>
     </Provider>
