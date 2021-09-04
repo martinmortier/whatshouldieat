@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { View } from "react-native";
 import { Text, Input, Icon } from "react-native-elements";
+import DisplayAllDishes from "../components/DisplayAllDishes";
 const FindDishScreen = () => {
   const [search, setSearch] = useState("");
 
@@ -14,6 +15,7 @@ const FindDishScreen = () => {
           value={search}
           leftIcon={<Icon name="search" size={24} color="black" />}
         />
+        <DisplayAllDishes />
       </View>
     </View>
   );

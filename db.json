@@ -16,6 +16,40 @@
             ],
             "time": 30,
             "votes": 5
+        },
+        {
+            "id":2,
+            "image":"URL",
+            "name": "Pizza",
+            "ingredients": [
+                {
+                    "id_ingredients": 1,
+                    "name":"Lettuce"
+                },
+                {
+                    "id_ingredients": 2,
+                    "name":"Tomato"
+                }
+            ],
+            "time": 60,
+            "votes": 2
+        },
+        {
+            "id":3,
+            "image":"URL",
+            "name": "Kebab",
+            "ingredients": [
+                {
+                    "id_ingredients": 1,
+                    "name":"Lettuce"
+                },
+                {
+                    "id_ingredients": 2,
+                    "name":"Tomato"
+                }
+            ],
+            "time": 10,
+            "votes": 1
         }
     ]
 }
