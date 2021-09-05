@@ -14,16 +14,12 @@ const DisplayAllDishes = ({dishes}:DisplayAllDishesProps) => {
       {dishes?.map(
         (
           dish,
-          index // () Return {} don't
+          index // () Return - {} don't
         ) => (
           <Card key={index}>
             <Card.Title>{dish.name}</Card.Title>
             {dish.ingredients.map((ingredient, index) => (
-              <ListItem key={index}>
-                <ListItem.Content>
-                  <ListItem.Title>{ingredient.name}</ListItem.Title>
-                </ListItem.Content>
-              </ListItem>
+              <Text key={index}>{ingredient.name}</Text>
             ))}
             <Card.Divider />
             <Text>{dish.time}</Text>
