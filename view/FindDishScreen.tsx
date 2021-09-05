@@ -19,7 +19,7 @@ const FindDishScreen = () => {
     dispatch(initialize())
   }, [])
   return (
-    <View style={{ backgroundColor: "orange", height: "100%" }}>
+    <View>
       <View style={{paddingTop:'10%'}}>
         <Text h1>Find foods !</Text>
         <Input

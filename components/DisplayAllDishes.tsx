@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { View } from "react-native";
-import { Text, ListItem } from "react-native-elements";
+import { Text, ListItem, Card } from "react-native-elements";
 import { IDish } from "../interfaces/IDish";
 import { getAllDish } from "../services/dishService";
 
@@ -10,14 +10,14 @@ type DisplayAllDishesProps = {
 const DisplayAllDishes = ({dishes}:DisplayAllDishesProps) => {
 
   return (
-    <View>
+    <View style={{display:"flex", flexDirection:"row"}}>
       {dishes?.map(
         (
           dish,
           index // () Return {} don't
         ) => (
-          <View key={index}>
-            <Text>{dish.name}</Text>
+          <Card key={index}>
+            <Card.Title>{dish.name}</Card.Title>
             {dish.ingredients.map((ingredient, index) => (
               <ListItem key={index}>
                 <ListItem.Content>
@@ -25,7 +25,10 @@ const DisplayAllDishes = ({dishes}:DisplayAllDishesProps) => {
                 </ListItem.Content>
               </ListItem>
             ))}
-          </View>
+            <Card.Divider />
+            <Text>{dish.time}</Text>
+            <Text>{dish.votes}</Text>
+          </Card>
         )
       )}
     </View>
