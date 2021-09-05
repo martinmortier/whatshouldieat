@@ -11,7 +11,7 @@ const DishScreen = () => {
   }, []);
 
   return (
-    <View>
+    <View style={{paddingTop:'10%'}}>
       {dish ? (
         <>
           <DishDetails dish={dish} />
