@@ -7,7 +7,7 @@ export const getDishById = async(id: number) : Promise<IDish> => {
     return response.data
 }
 
-export const getAllDish = async () : Promise<IDish[]> => {
+export const getAllDishes = async () : Promise<IDish[]> => {
     const response = await axios.get(`${API_URL}/dish`)
     return response.data
 }

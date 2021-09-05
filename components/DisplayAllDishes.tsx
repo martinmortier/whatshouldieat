@@ -3,18 +3,15 @@ import { View } from "react-native";
 import { Text, ListItem } from "react-native-elements";
 import { IDish } from "../interfaces/IDish";
 import { getAllDish } from "../services/dishService";
-const DisplayAllDishes = () => {
-  const [allDishes, setAllDishes] = useState<IDish[]>();
-  const getAllDishes = async () => {
-    const allDishes = await getAllDish();
-    setAllDishes(allDishes);
-  };
-  useEffect(() => {
-    getAllDishes();
-  }, []);
+
+type DisplayAllDishesProps = {
+  dishes: IDish[];
+}
+const DisplayAllDishes = ({dishes}:DisplayAllDishesProps) => {
+
   return (
     <View>
-      {allDishes?.map(
+      {dishes?.map(
         (
           dish,
           index // () Return {} don't
