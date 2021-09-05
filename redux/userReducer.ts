@@ -1,5 +1,6 @@
 const initialState: IUser = {
   id: 0,
+  image: "",
   username: "",
   email: "",
   tokenJWT: ""

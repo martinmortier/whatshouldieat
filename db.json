@@ -55,6 +55,7 @@
     "user": [
         {
             "id":1,
+            "image": "URL",
             "username": "user1",
             "email": "email01@email.com",
             "tokenJWT": "tokenJWT01"
