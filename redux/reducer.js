@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import allDishesReducer from './AllDishesReducer';
+import allDishesReducer from './allDishesReducer';
 import DishReducer from './dishReducer';
 const rootReducer = combineReducers({
     dish: DishReducer,

@@ -3,9 +3,7 @@ import { View } from "react-native";
 import { Text, Input, Icon } from "react-native-elements";
 import DisplayAllDishes from "../components/DisplayAllDishes";
 import { useAppDispatch, useAppSelector } from "../hooks/reduxHooks";
-import { filterDishes, initialize } from "../redux/AllDishesReducer";
-import { IDish } from "../interfaces/IDish";
-import { Button } from "react-native-elements/dist/buttons/Button";
+import { filterDishes, initialize } from "../redux/allDishesReducer";
 const FindDishScreen = () => {
   const [search, setSearch] = useState<string>("");
 

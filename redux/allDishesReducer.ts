@@ -28,7 +28,7 @@ export const filterDishes = (search: string) => {
     }
     dispatch({
       type:"FILTER_DISHES_BY_NAME",
-      payload: getState().allDishes.filter((dish:IDish) => dish.name.includes(search))
+      payload: getState().allDishes.filter((dish:IDish) => dish.name.toLowerCase().includes(search.toLowerCase()))
     })
   }
 }
