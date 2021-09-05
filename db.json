@@ -51,5 +51,13 @@
             "time": 10,
             "votes": 1
         }
+    ],
+    "user": [
+        {
+            "id":1,
+            "username": "user1",
+            "email": "email01@email.com",
+            "tokenJWT": "tokenJWT01"
+        }
     ]
 }

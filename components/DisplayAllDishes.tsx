@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { View } from "react-native";
-import { Text, ListItem, Card } from "react-native-elements";
+import { Text, Card } from "react-native-elements";
 import { IDish } from "../interfaces/IDish";
-import { getAllDish } from "../services/dishService";
-
 type DisplayAllDishesProps = {
   dishes: IDish[];
 }
