@@ -1,13 +1,12 @@
-import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import React, { useState, useEffect} from "react";
 import { View } from "react-native";
 import { Text, Input, Icon } from "react-native-elements";
 import DisplayAllDishes from "../components/DisplayAllDishes";
 import { useAppDispatch, useAppSelector } from "../hooks/reduxHooks";
 import { filterDishes, initialize } from "../redux/allDishesReducer";
-
+import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
 type FindDishScreenProps = {
-  navigation: any
+  navigation: BottomTabNavigationProp<any>
 }
 const FindDishScreen = ({ navigation }: FindDishScreenProps) => {
   const [search, setSearch] = useState<string>("");
