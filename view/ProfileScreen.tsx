@@ -1,10 +1,11 @@
-import React from 'react'
-import { View } from 'react-native'
+import React from "react";
+import { View, Text } from "react-native";
 const ProfileScreen = () => {
-    return (
-        <View>
-            
-        </View>
-}
+  return (
+    <View style={{paddingTop:"10%"}}>
+      <Text>Profile Screen</Text>
+    </View>
+  );
+};
 
-export default ProfileScreen
+export default ProfileScreen;

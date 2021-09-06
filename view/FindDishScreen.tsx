@@ -1,10 +1,15 @@
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import React, { useState, useEffect} from "react";
 import { View } from "react-native";
 import { Text, Input, Icon } from "react-native-elements";
 import DisplayAllDishes from "../components/DisplayAllDishes";
 import { useAppDispatch, useAppSelector } from "../hooks/reduxHooks";
 import { filterDishes, initialize } from "../redux/allDishesReducer";
-const FindDishScreen = () => {
+
+type FindDishScreenProps = {
+  navigation: any
+}
+const FindDishScreen = ({ navigation }: FindDishScreenProps) => {
   const [search, setSearch] = useState<string>("");
 
   const dispatch = useAppDispatch()
@@ -26,7 +31,7 @@ const FindDishScreen = () => {
           value={search}
           leftIcon={<Icon name="search" size={24} color="black" />}
         />
-        <DisplayAllDishes dishes={dishes} />
+        <DisplayAllDishes dishes={dishes} navigation={navigation}/>
       </View>
     </View>
   );
