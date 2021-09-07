@@ -22,7 +22,7 @@ const FindDishScreen = ({ navigation }: FindDishScreenProps) => {
   }, [])
   return (
     <View>
-      <View style={{paddingTop:'10%'}}>
+      <View>
         <Text h1>Find foods !</Text>
         <Input
           placeholder="Search dishes"
