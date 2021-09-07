@@ -4,10 +4,10 @@ import store from "./redux/store";
 import { NavigationContainer } from "@react-navigation/native";
 import HomeScreen from "./view/HomeScreen";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import DishScreen from "./view/DishScreen";
 import FindDishScreen from "./view/FindDishScreen";
 import ProfileScreen from "./view/ProfileScreen";
 import Icon from "react-native-vector-icons/FontAwesome";
+import FindDishStackScreen from "./view/FindDishStackScreen";
 
 const Tab = createBottomTabNavigator();
 export default function App() {
@@ -16,21 +16,29 @@ export default function App() {
       <NavigationContainer>
         <Tab.Navigator screenOptions={{ headerShown: false }}>
           <Tab.Screen
-            name="Profile"
+            name="ProfileScreen"
             component={ProfileScreen}
             options={{
               tabBarIcon: () => (
                 <Icon name="user-circle" size={24} color="black" />
               ),
+              title: "Profile",
             }}
           />
-          <Tab.Screen name="Home" component={HomeScreen} />
-          <Tab.Screen name="Dish" component={DishScreen} />
           <Tab.Screen
-            name="FindDish"
-            component={FindDishScreen}
+            name="HomeScreen"
+            component={HomeScreen}
+            options={{
+              tabBarIcon: () => <Icon name="home" size={24} color="black" />,
+              title: "Home"
+            }}
+          />
+          <Tab.Screen
+            name="FindDishStackScreen"
+            component={FindDishStackScreen}
             options={{
               tabBarIcon: () => <Icon name="search" size={24} color="black" />,
+              title: "Find"
             }}
           />
         </Tab.Navigator>
