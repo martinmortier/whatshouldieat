@@ -8,6 +8,7 @@ import FindDishScreen from "./view/FindDishScreen";
 import ProfileScreen from "./view/ProfileScreen";
 import Icon from "react-native-vector-icons/FontAwesome";
 import FindDishStackScreen from "./view/FindDishStackScreen";
+import RandomDishesScreen from "./view/RandomDishesScreen";
 
 const Tab = createBottomTabNavigator();
 export default function App() {
@@ -16,13 +17,11 @@ export default function App() {
       <NavigationContainer>
         <Tab.Navigator screenOptions={{ headerShown: false }}>
           <Tab.Screen
-            name="ProfileScreen"
-            component={ProfileScreen}
+            name="RandomDishesScreen"
+            component={RandomDishesScreen}
             options={{
-              tabBarIcon: () => (
-                <Icon name="user-circle" size={24} color="black" />
-              ),
-              title: "Profile",
+              tabBarIcon: () => <Icon name="random" size={24} color="black" />,
+              title: "Random"
             }}
           />
           <Tab.Screen
@@ -39,6 +38,16 @@ export default function App() {
             options={{
               tabBarIcon: () => <Icon name="search" size={24} color="black" />,
               title: "Find"
+            }}
+          />
+          <Tab.Screen
+            name="ProfileScreen"
+            component={ProfileScreen}
+            options={{
+              tabBarIcon: () => (
+                <Icon name="user-circle" size={24} color="black" />
+              ),
+              title: "Profile",
             }}
           />
         </Tab.Navigator>
