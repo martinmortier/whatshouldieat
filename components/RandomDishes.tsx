@@ -7,14 +7,9 @@ import DishDetails from "./DishDetails";
 import { getRandomDishes } from '../services/dishService'
 type RandomDishesProps = {
   count: number;
+  dishes: IDish[];
 };
-const RandomDishes = ({ count }: RandomDishesProps) => {
-  const dispatch = useAppDispatch();
-  const dishes: IDish[] = useAppSelector((state) => state.allDishes);
-
-  useEffect(() => {
-    dispatch(initialize());
-  }, []);
+const RandomDishes = ({ count, dishes }: RandomDishesProps) => {
 
   return (
     <View>
