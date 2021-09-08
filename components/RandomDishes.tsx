@@ -4,7 +4,7 @@ import { useAppDispatch, useAppSelector } from "../hooks/reduxHooks";
 import { IDish } from "../interfaces/IDish";
 import { initialize } from "../redux/allDishesReducer";
 import DishDetails from "./DishDetails";
-
+import { getRandomDishes } from '../services/dishService'
 type RandomDishesProps = {
   count: number;
 };
@@ -15,15 +15,6 @@ const RandomDishes = ({ count }: RandomDishesProps) => {
   useEffect(() => {
     dispatch(initialize());
   }, []);
-
-  const getRandomDishes = (data: IDish[], count: number): IDish[] => {
-    const dishesRandom = Array.from(
-      { length: count },
-      () => data[Math.floor(Math.random() * data.length)]
-    );
-    console.log(dishesRandom,"random");
-    return dishesRandom;
-  };
 
   return (
     <View>
