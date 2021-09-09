@@ -3,6 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import DishScreen from "../view/DishScreen";
 import RandomDishesScreen from "../view/RandomDishesScreen";
+import DishesByWeek from '../components/DishesByWeek';
 
 const Stack = createNativeStackNavigator();
 const RandomDishesStack = () => {
@@ -12,6 +13,7 @@ const RandomDishesStack = () => {
           name="RandomDishesScreen"
           component={RandomDishesScreen}
         />
+        <Stack.Screen name="DishesByWeek" component={DishesByWeek} />
         <Stack.Screen name="DishScreen" component={DishScreen} />
       </Stack.Navigator>
   );

@@ -25,7 +25,7 @@ const RandomDishesScreen = ({ navigation }: any) => {
               return navigation.navigate("DishScreen", { id: dish_id });
             }}
           />
-          <RandomDishes dishes={dishes} count={2} />
+          <Button title="Propose me some dishes for my week" onPress={() => navigation.navigate("DishesByWeek", {dishes: dishes})} />
         </View>
       )}
     </View>

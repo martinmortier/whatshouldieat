@@ -10,7 +10,6 @@ type RandomDishesProps = {
   dishes: IDish[];
 };
 const RandomDishes = ({ count, dishes }: RandomDishesProps) => {
-
   return (
     <View>
       {getRandomDishes(dishes, count).map((dish, index) => (
