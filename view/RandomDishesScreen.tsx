@@ -16,14 +16,18 @@ const RandomDishesScreen = ({ navigation }: any) => {
 
   return (
     <View style={{ paddingTop: "10%" }}>
-      <Button
-        title="I want a random dish !"
-        onPress={() => {
-          const dish_id: number = getRandomDishes(dishes, 1)[0].id;
-          return navigation.navigate("DishScreen", { id: dish_id });
-        }}
-      />
-      <RandomDishes dishes={dishes} count={2} />
+      {dishes.length > 0 && (
+        <View>
+          <Button
+            title="I want a random dish !"
+            onPress={() => {
+              const dish_id: number = getRandomDishes(dishes, 1)[0].id;
+              return navigation.navigate("DishScreen", { id: dish_id });
+            }}
+          />
+          <RandomDishes dishes={dishes} count={2} />
+        </View>
+      )}
     </View>
   );
 };
