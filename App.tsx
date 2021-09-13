@@ -17,19 +17,11 @@ export default function App() {
       <NavigationContainer>
         <Tab.Navigator screenOptions={{ headerShown: false }}>
           <Tab.Screen
-            name="RandomDishesStack"
-            component={RandomDishesStack}
-            options={{
-              tabBarIcon: () => <Icon name="random" size={24} color="black" />,
-              title: "Random"
-            }}
-          />
-          <Tab.Screen
             name="HomeScreen"
             component={HomeScreen}
             options={{
               tabBarIcon: () => <Icon name="home" size={24} color="black" />,
-              title: "Home"
+              title: "Home",
             }}
           />
           <Tab.Screen
@@ -37,7 +29,15 @@ export default function App() {
             component={FindDishStack}
             options={{
               tabBarIcon: () => <Icon name="search" size={24} color="black" />,
-              title: "Find"
+              title: "Find",
+            }}
+          />
+          <Tab.Screen
+            name="RandomDishesStack"
+            component={RandomDishesStack}
+            options={{
+              tabBarIcon: () => <Icon name="random" size={24} color="black" />,
+              title: "Random",
             }}
           />
           <Tab.Screen

@@ -23,7 +23,6 @@ const DishScreen = ({ route }: DishScreenProps) => {
       {dish ? (
         <>
           <DishDetails dish={dish} />
-          <Text>Description screen !</Text>
         </>
       ) : (
         <Text>Loading...</Text>
