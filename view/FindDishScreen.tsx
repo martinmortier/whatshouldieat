@@ -21,7 +21,7 @@ const FindDishScreen = ({ navigation }: FindDishScreenProps) => {
     dispatch(initialize());
   }, []);
   return (
-    <View>
+    <View style={{backgroundColor:'white'}}>
       {dishes ? (
         <View style={styles.main}>
           <Text h1>Find foods !</Text>
