@@ -2,7 +2,7 @@
     "dish": [
         {
             "id":1,
-            "image":"URL",
+            "image":"../assets/hamburger.png",
             "name": "Hamburger",
             "ingredients": [
                 {
@@ -19,7 +19,7 @@
         },
         {
             "id":2,
-            "image":"URL",
+            "image":"../assets/pizza.png",
             "name": "Pizza",
             "ingredients": [
                 {
@@ -36,7 +36,7 @@
         },
         {
             "id":3,
-            "image":"URL",
+            "image":"../assets/kebab.png",
             "name": "Kebab",
             "ingredients": [
                 {

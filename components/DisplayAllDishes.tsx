@@ -1,8 +1,9 @@
 import React from "react";
 import { View } from "react-native";
-import { Text, Card, Button } from "react-native-elements";
+import { Text, Card, Button, Image } from "react-native-elements";
 import { IDish } from "../interfaces/IDish";
 import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs'
+import image from '../assets'
 
 type DisplayAllDishesProps = {
   dishes: IDish[];
@@ -18,6 +19,7 @@ const DisplayAllDishes = ({dishes, navigation}:DisplayAllDishesProps) => {
           index // () Return - {} don't
         ) => (
           <Card key={index} containerStyle={{...styles.items, backgroundColor: backgroundItemsColors[index]}}>
+            <Image source={require('../assets/hamburger.png')} style={{width:100, height:100}}/>
             <Card.Title>{dish.name}</Card.Title>
             {dish.ingredients.map((ingredient, index) => (
               <Text key={index}>{ingredient.name}</Text>
