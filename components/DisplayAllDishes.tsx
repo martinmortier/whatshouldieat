@@ -28,7 +28,7 @@ const DisplayAllDishes = ({ dishes, navigation }: DisplayAllDishesProps) => {
           >
             <Image
               source={{ uri: dish.image }}
-              style={{ width: 100, height: 100 }}
+              style={styles.image}
             />
             <Card.Title>{dish.name}</Card.Title>
             {dish.ingredients.map((ingredient, index) => (
@@ -63,5 +63,9 @@ const styles = StyleSheet.create({
   infosButton: {
     backgroundColor: "#ff8a02",
   },
+  image: {
+    width: 100,
+    height:100
+  }
 });
 export default DisplayAllDishes;
