@@ -51,7 +51,7 @@ const styles = {
     paddingHorizontal: 13,
   },
   input: {
-    backgroundColor: "#f8e8d9",
+    // backgroundColor: "#ff8a02",
     borderRadius: 20,
   },
 };

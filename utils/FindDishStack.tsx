@@ -11,12 +11,12 @@ const FindDishStack = () => {
       <Stack.Screen
         name="FindDishScreen"
         component={FindDishScreen}
-        options={{ title: "Find !" }}
+        options={{ title: "", headerStyle: {backgroundColor:"#ff8a02"}}}
       />
       <Stack.Screen
         name="DishScreen"
         component={DishScreen}
-        options={{ title: "Dish" }}
+        options={{ title: "" }}
       />
     </Stack.Navigator>
   );

@@ -9,7 +9,6 @@ type DisplayAllDishesProps = {
 };
 const DisplayAllDishes = ({ dishes, navigation }: DisplayAllDishesProps) => {
   const backgroundItemsColors: string[] = ["#fdf7d0", "#ebefd9", "#f4d7d7"];
-
   return (
     <View style={styles.main}>
       {dishes?.map(
@@ -36,8 +35,8 @@ const DisplayAllDishes = ({ dishes, navigation }: DisplayAllDishesProps) => {
               <Text key={index}>{ingredient.name}</Text>
             ))}
             <Card.Divider />
-            <Text>{dish.time}</Text>
-            <Text>{dish.votes}</Text>
+            <Text>Time: {dish.time} minutes</Text>
+            <Text>Votes: {dish.votes} </Text>
             <Button
               onPress={() => navigation.navigate("DishScreen", { id: dish.id })}
               title="Infos"
