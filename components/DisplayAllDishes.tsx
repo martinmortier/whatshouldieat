@@ -60,7 +60,6 @@ const styles = StyleSheet.create({
   },
   items: {
     flexBasis: "40%",
-    alignSelf: "center",
   },
   infosButton: {
     backgroundColor: "#ff8a02",
