@@ -7,7 +7,7 @@ const HomeScreen = () => {
   return (
     <View style={styles.layout}>
       <View style={styles.header}>
-        <Text style={{ flexGrow: 1, color:'white' }}>Hello</Text>
+        <Text style={{ flexGrow: 1, color:'white', textAlign:'center' }} h4>Hello John Doe</Text>
         <Avatar
           containerStyle={{ marginRight: "10%" }}
           rounded
@@ -28,12 +28,9 @@ const HomeScreen = () => {
           }}
           style={styles.mainImage}
         />
-        <Text h3>Title</Text>
+        <Text h4>You don't know what to eat ?</Text>
         <Text style={{ textAlign: "center" }}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-          assumenda tenetur ea pariatur commodi, nemo saepe alias. Omnis
-          obcaecati necessitatibus modi molestiae accusamus exercitationem
-          dolore, natus iste atque eum facere.
+         If you don't know what to eat today or for the week, don't worry. Just use the random feature !
         </Text>
       </View>
     </View>
