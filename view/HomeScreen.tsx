@@ -4,17 +4,20 @@ import { Avatar } from "react-native-elements";
 const HomeScreen = () => {
     const avatarURL = 'https://icon-library.com/images/avatar-icon/avatar-icon-14.jpg'
   return (
-    <View style={styles.main}>
+    <View style={styles.layout}>
       <View style={styles.header}>
         <Text style={{ flexGrow: 1 }}>Hello</Text>
         <Avatar containerStyle={{marginRight:'10%'}} rounded size="large" source={{uri: avatarURL}} />
+        <View style={{}}>
+
+        </View>
       </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  main: {
+  layout: {
     display: "flex",
     paddingTop: "10%",
     flexWrap: "wrap",
@@ -25,11 +28,14 @@ const styles = StyleSheet.create({
     display: "flex",
     flexWrap: "wrap",
     flexDirection: "row",
-    // backgroundColor:'blue'
   },
   headerText: {
       //TODO: Terminate the styling
+  },
+  main:{
+    
   }
+
 });
 
 export default HomeScreen;

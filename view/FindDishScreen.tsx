@@ -25,7 +25,7 @@ const FindDishScreen = ({ navigation }: FindDishScreenProps) => {
       <ScrollView>
         <View style={{ backgroundColor: "white" }}>
           {dishes ? (
-            <View style={styles.main}>
+            <View style={styles.layout}>
               <Text h1>Find foods !</Text>
               <View style={styles.input}>
                 <Input
@@ -47,7 +47,7 @@ const FindDishScreen = ({ navigation }: FindDishScreenProps) => {
 };
 
 const styles = {
-  main: {
+  layout: {
     paddingHorizontal: 13,
   },
   input: {

@@ -10,7 +10,7 @@ type DisplayAllDishesProps = {
 const DisplayAllDishes = ({ dishes, navigation }: DisplayAllDishesProps) => {
   const backgroundItemsColors: string[] = ["#fdf7d0", "#ebefd9", "#f4d7d7"];
   return (
-    <View style={styles.main}>
+    <View style={styles.layout}>
       {dishes?.map(
         (
           dish: IDish,
@@ -50,7 +50,7 @@ const DisplayAllDishes = ({ dishes, navigation }: DisplayAllDishesProps) => {
 };
 
 const styles = StyleSheet.create({
-  main: {
+  layout: {
     display: "flex",
     flexDirection: "row",
     flexWrap: "wrap",
