@@ -4,6 +4,7 @@ import { Text, Avatar, Image } from "react-native-elements";
 const HomeScreen = () => {
   const avatarURL =
     "https://icon-library.com/images/avatar-icon/avatar-icon-14.jpg";
+    //TODO: Refactor in components
   return (
     <View style={styles.layout}>
       <View style={styles.header}>
