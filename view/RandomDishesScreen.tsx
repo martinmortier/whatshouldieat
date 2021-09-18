@@ -20,7 +20,7 @@ const RandomDishesScreen = ({ navigation }: any) => {
         <View>
           <Text>Make a choice ! </Text>
           <Button
-            title="I want a random dish !"
+            title="I want a random dish"
             buttonStyle={styles.button}
             onPress={() => {
               const dish_id: number = getRandomDishes(dishes, 1)[0].id;
@@ -42,18 +42,19 @@ const RandomDishesScreen = ({ navigation }: any) => {
 
 const styles = StyleSheet.create({
   layout: {
-    display:'flex',
-    flexDirection:'column',
-    justifyContent:'center',
-    alignItems:'center',
-    flexGrow:1
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    flexGrow: 1,
+    backgroundColor:'white',
   },
   button: {
-    backgroundColor:'#ff8a02',
-    margin:20,
-    borderRadius:10,
-    padding:"5%"
-  }
+    backgroundColor: "#ff8a02",
+    margin: 20,
+    borderRadius: 10,
+    padding: "5%",
+  },
 });
 
 export default RandomDishesScreen;
