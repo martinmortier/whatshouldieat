@@ -15,7 +15,7 @@ export default function App() {
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <Tab.Navigator screenOptions={{ headerShown: false }}>
+        <Tab.Navigator screenOptions={{ headerShown: false, tabBarActiveTintColor:"#ff8a02" }}>
           <Tab.Screen
             name="HomeScreen"
             component={HomeScreen}

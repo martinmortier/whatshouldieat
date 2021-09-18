@@ -12,6 +12,7 @@ const RandomDishesStack = () => {
         <Stack.Screen
           name="RandomDishesScreen"
           component={RandomDishesScreen}
+          options={{ title: "", headerStyle: {backgroundColor:"#ff8a02"}}}
         />
         <Stack.Screen name="DishesByWeek" component={DishesByWeek} />
         <Stack.Screen name="DishScreen" component={DishScreen} />

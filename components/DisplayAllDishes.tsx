@@ -58,9 +58,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   items: {
-    flexBasis: "40%",
+    flexBasis: "40%"
   },
   infosButton: {
+    marginTop:'10%',
     backgroundColor: "#ff8a02",
   },
   image: {
